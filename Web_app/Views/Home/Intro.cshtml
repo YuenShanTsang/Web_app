@@ -1,28 +1,34 @@
 @model Intro
-@{
+@{  /*A title*/ 
     ViewData["Title"] = "Intro";
 }
+@*To print my name*@
 <h3>Yuen Shan Tsang</h3>
 
+@*A form*@
 <form method="post">
+    @*Two number inputs*@
     <div>
         <label asp-for="FirstNumber"></label>
         <input asp-for="FirstNumber" type="number"/>
+        <span asp-validation-for="FirstNumber"></span>
     </div>
-    
     <div>
         <label asp-for="SecondNumber"></label>
         <input asp-for="SecondNumber" type="number"/>
+        <span asp-validation-for="SecondNumber"></span>
     </div>
-    
+    @*An output*@
     <div>
         <label asp-for="Output"></label>
         <output asp-for="Output"></output>
+        <span asp-validation-for="Output"></span>
     </div>
-
+    @*A submit button*@
     <Button type="submit" value="Submit">Submit</button>
 </form>
 
+@*A paragraph of text*@
 @section NewSection
 {
     <p>This is a ASP.Net Core MVC Web Application. 

@@ -26,6 +26,7 @@
                         <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                     </li>
                     <li class="nav-item">
+                        @*A new link*@
                         <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Intro">Intro</a>
                     </li>
                 </ul>
@@ -38,6 +39,7 @@
         @RenderBody()
     </main>
     <aside>
+        @*A new section*@
         @await RenderSectionAsync("NewSection", required: false)
     </aside>
 </div>
