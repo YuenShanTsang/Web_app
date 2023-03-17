@@ -1,0 +1,31 @@
+@model Intro
+@{
+    ViewData["Title"] = "Intro";
+}
+<h3>Yuen Shan Tsang</h3>
+
+<form method="post">
+    <div>
+        <label asp-for="FirstNumber"></label>
+        <input asp-for="FirstNumber" type="number"/>
+    </div>
+    
+    <div>
+        <label asp-for="SecondNumber"></label>
+        <input asp-for="SecondNumber" type="number"/>
+    </div>
+    
+    <div>
+        <label asp-for="Output"></label>
+        <output asp-for="Output"></output>
+    </div>
+
+    <Button type="submit" value="Submit">Submit</button>
+</form>
+
+@section NewSection
+{
+    <p>This is a ASP.Net Core MVC Web Application. 
+        An Intro page and  a form were created.
+        This is a paragraph using section.</p>
+}
